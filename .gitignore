@@ -1,0 +1,11 @@
+# Build
+build/
+*.exe
+*.o
+
+# Data
+data/raw/*.csv
+
+# IDE
+.vscode/
+.idea/
