@@ -22,5 +22,7 @@ int main() {
         delete e;
     }
 
+    replay_engine.report_metrics();
+
     return 0;
 }
