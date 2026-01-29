@@ -7,6 +7,8 @@ int main() {
     EventScheduler scheduler;
     ReplayEngine replay_engine;
 
+    replay_engine.attach_scheduler(&scheduler);
+
     TwapStrategy twap(1000.0, 3, &replay_engine);
     replay_engine.register_strategy(&twap);
 
@@ -23,6 +25,5 @@ int main() {
     }
 
     replay_engine.report_metrics();
-
     return 0;
 }
