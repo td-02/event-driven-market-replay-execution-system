@@ -9,8 +9,9 @@ private:
     int slices_sent;
 
 public:
-    TwapStrategy(double qty, int slices)
-        : total_quantity(qty),
+    TwapStrategy(double qty, int slices, ReplayEngine* eng)
+        : Strategy(eng),
+          total_quantity(qty),
           total_slices(slices),
           slices_sent(0) {}
 

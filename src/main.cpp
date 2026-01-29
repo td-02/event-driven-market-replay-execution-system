@@ -7,7 +7,7 @@ int main() {
     EventScheduler scheduler;
     ReplayEngine replay_engine;
 
-    TwapStrategy twap(1000.0, 3);
+    TwapStrategy twap(1000.0, 3, &replay_engine);
     replay_engine.register_strategy(&twap);
 
     CsvMarketDataLoader::load(
